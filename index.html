@@ -4,53 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Birds Vue</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body class="container">
 
-    <div class="jumbotron">
-      <h1>Hello, fish vue! <i class="fa fa-apple"></i></h1>
-      <div id="app">
-        {{ message }}
-      </div>
-      <div id="app2">
-        <ul>
-          <h5>Todos</h5>
-          <li v-for="t in todos">
-            {{ t.text }}
-          </li>
-        </ul>
-        <ul>
-          <h5>Numbers</h5>
-          <li v-for="n in numbers">
-            {{ n }}
-          </li>
-        </ul>
-      </div>
-      <div id="app3">
-        <ul>
-          <h5>All Fish</h5>
-          <li v-for="f in fishies">
-            {{ f.type }}
-          </li>
-        </ul>
-        <ul>
-          <h5>Pacifc Fish</h5>
-          <li v-for="p in pacificFish">
-            {{ p.type }}
-          </li>
-        </ul>
-        <ul>
-          <h5>Caribbean Fish</h5>
-          <li v-for="c in caribbeanFish">
-            {{ c.type }}
-          </li>
-        </ul>
+    <div class="jumbotron my-jumbo" id="app">
+      <h2> {{  title }}</h2>
+      <div class="bird-flex-container">
+        <div v-for="b in birds" class="bird-container">
+          <h3> {{ b.name }} </h3>
+          <p> {{ b.species }}  </p>
+          <p> {{ b.gender }}  </p>
+          <img :src="b.img" class="bird-img"/>
+        </div>
       </div>
     </div>
 

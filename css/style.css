@@ -1,0 +1,45 @@
+body {
+  background-color: #3498db;
+}
+
+.my-jumbo {
+  background-color: #34495e;
+}
+
+.my-jumbo h2 {
+  color: #ecf0f1;
+}
+
+
+.bird-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.bird-container {
+  text-align: center;
+  border: solid 3px black;
+  max-width: 33.333%;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(33.33% - 20px);
+  background-color: #2ecc71;
+  border-radius:10px;
+  color: #34495e;
+}
+
+.bird-img {
+  max-width: 100%;
+  border-radius: 30px;
+  border: solid 10px  #3498db;
+}
+
+@media screen and (max-width: 780px) {
+    .bird-flex-container {
+      flex-direction: column;
+    }
+    .bird-container {
+      max-width: 100%;
+    }
+}
